@@ -107,6 +107,7 @@ namespace FASTER
             IAutoReporting.IsChecked = profile.AutoReporting;
             IScoreTable.IsChecked = profile.ScoreTable;
             ITacticalPing.IsChecked = profile.TacticalPing;
+            IMapPing.IsChecked = profile.MapPing;
             IAiAccuracy.Text = profile.AiAccuracy.ToString();
             IAiSkill.Text = profile.AiSkill.ToString();
             IAiPreset.Text = profile.AiPreset.ToString();
@@ -629,6 +630,7 @@ namespace FASTER
             profile.AutoReporting = IAutoReporting.IsChecked ?? false;
             profile.ScoreTable = IScoreTable.IsChecked ?? false;
             profile.TacticalPing = ITacticalPing.IsChecked ?? false;
+            profile.MapPing = IMapPing.IsChecked ?? false;
             profile.AiAccuracy = double.Parse(IAiAccuracy.Text);
             profile.AiSkill = double.Parse(IAiSkill.Text);
             profile.AiPreset = int.Parse(IAiPreset.Text);
@@ -886,6 +888,7 @@ namespace FASTER
                 $"\t\t\tcommands={ICommands.Text};",
                 $"\t\t\twaypoints={IWaypoints.Text};",
                 $"\t\t\ttacticalPing={ITacticalPing.IsChecked};",
+                $"\t\t\tmapContentPing={IMapPing.IsChecked};",
                 $"\t\t\tweaponInfo={IWeaponInfo.Text};",
                 $"\t\t\tstanceIndicator={IStanceIndicator.Text};",
                 $"\t\t\tstaminaBar={IStaminaBar.IsChecked};",
@@ -893,7 +896,7 @@ namespace FASTER
                 $"\t\t\tvisionAid={IVisualAids.IsChecked};",
                 $"\t\t\tthirdPersonView={IThirdPerson.IsChecked};",
                 $"\t\t\tcameraShake={ICameraShake.IsChecked};",
-                $"\t\t\tcoreTable={IScoreTable.IsChecked};",
+                $"\t\t\tscoreTable={IScoreTable.IsChecked};",
                 $"\t\t\tdeathMessages={IKilledBy.IsChecked};",
                 $"\t\t\tvonID={IVonId.IsChecked};",
                 $"\t\t\tmapContentFriendly={IMapContentFriendly.IsChecked};",

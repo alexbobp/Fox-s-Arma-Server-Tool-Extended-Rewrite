@@ -170,6 +170,7 @@ namespace FASTER.Models
         public bool AutoReporting { get; set; }
         public bool ScoreTable { get; set; }
         public bool TacticalPing { get; set; }
+        public bool MapPing { get; set; }
         public double AiAccuracy { get; set; } = 0.95;
         public double AiSkill { get; set; } = 0.55;
         public int AiPreset { get; set; } = 3;
